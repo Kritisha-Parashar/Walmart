@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ShoppingListForm from "./pages/ShoppingListForm";
 import ShopListItemPage from "./pages/ShopListItemPage";
+import ShoppingListCart from "./pages/ShoppingListCart";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
           <Route path="/shopping-list" element={<ShoppingListForm />} />
           <Route path="/shop-list/:item" element={<ShopListItemPage />} />
+          <Route path="/shopping-list-cart" element={<ShoppingListCart />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
