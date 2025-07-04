@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import walmartLogo from "@/assets/walmart-logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   
@@ -149,28 +150,39 @@ const Header = () => {
       </div>
 
       {/* ─── Navigation bar ─── */}
-      <div className="bg-white text-gray-700 border-t">
-        <div className="max-w-7xl mx-auto px-4">
-          <nav className="flex items-center gap-8 py-3 text-sm">
-            <button className="hover:text-walmart-blue font-medium">
-              Grocery & essentials
-            </button>
-            <button className="hover:text-walmart-blue">Valentine's Day</button>
-            <button className="hover:text-walmart-blue">New Arrivals</button>
-            <button className="hover:text-walmart-blue">4th of July</button>
-            <button className="hover:text-walmart-blue">Dinner Made Easy</button>
-            <button className="hover:text-walmart-blue">Pharmacy</button>
-            <button className="hover:text-walmart-blue">Delivery</button>
-            <button className="hover:text-walmart-blue">Trending</button>
-            <button className="hover:text-walmart-blue">Swim Shop</button>
-            <button className="hover:text-walmart-blue">My Items</button>
-            <button className="hover:text-walmart-blue">Auto Service</button>
-            <button className="hover:text-walmart-blue">Only at Walmart</button>
-            <button className="hover:text-walmart-blue">Registry</button>
-            <button className="hover:text-walmart-blue">Walmart+</button>
-          </nav>
+      <div className="max-w-screen-xl mx-auto p-4 overflow-x-hidden">
+        {/* All your content */}
+          <div className="bg-white text-gray-700 border-t">
+          <div className="max-w-7xl mx-auto px-4">
+          <div className="overflow-x-auto">
+            <nav className="flex items-center gap-6 py-3 text-sm w-max px-4">
+              <Link to="/shopping-list">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                📝 Shop with Shopping List
+              </button>
+              </Link>
+              <button className="hover:text-walmart-blue font-medium">
+                Grocery & essentials
+              </button>
+              <button className="hover:text-walmart-blue">Valentine's Day</button>
+              <button className="hover:text-walmart-blue">New Arrivals</button>
+              <button className="hover:text-walmart-blue">4th of July</button>
+              <button className="hover:text-walmart-blue">Dinner Made Easy</button>
+              <button className="hover:text-walmart-blue">Pharmacy</button>
+              <button className="hover:text-walmart-blue">Delivery</button>
+              <button className="hover:text-walmart-blue">Trending</button>
+              <button className="hover:text-walmart-blue">Swim Shop</button>
+              <button className="hover:text-walmart-blue">My Items</button>
+              <button className="hover:text-walmart-blue">Auto Service</button>
+              <button className="hover:text-walmart-blue">Only at Walmart</button>
+              <button className="hover:text-walmart-blue">Registry</button>
+              <button className="hover:text-walmart-blue">Walmart+</button>
+            </nav>
+            </div>
+          </div>
         </div>
       </div>
+
     </header>
   );
 };
